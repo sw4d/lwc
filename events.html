@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Events - Upcoming community events and activities at Little Walnut Creek Greenbelt.">
+  <title>Events - Friends of Little Walnut Creek Greenbelt</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts - Libre Baskerville for elegance, Source Sans 3 for readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ========================================
+       Main Content
+       ======================================== */
+    main {
+      background-color: var(--color-white);
+    }
+
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+    }
+
+    .events-intro {
+      color: var(--color-stone-light);
+      line-height: 1.8;
+      margin-bottom: var(--space-xl);
+      text-align: center;
+    }
+
+    .events-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .events-list li {
+      background-color: var(--color-cream);
+      border-left: 4px solid var(--color-sage);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      border-radius: 0 4px 4px 0;
+      transition: border-color 0.2s ease;
+    }
+
+    .events-list li:hover {
+      border-left-color: var(--color-forest);
+    }
+
+    .event-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: var(--space-xs);
+    }
+
+    .event-date {
+      font-weight: 600;
+      color: var(--color-sage-dark);
+      margin-bottom: var(--space-sm);
+    }
+
+    .event-description {
+      color: var(--color-stone-light);
+      line-height: 1.7;
+    }
+
+    .no-events {
+      text-align: center;
+      color: var(--color-stone-light);
+      font-style: italic;
+      padding: var(--space-2xl);
+      background-color: var(--color-cream);
+      border-radius: 4px;
+    }
+
+    .event-link {
+      margin-top: var(--space-sm);
+    }
+
+    .event-link a {
+      color: var(--color-forest);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .event-link a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Skip link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Friends of Little Walnut Creek Greenbelt</h1>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="park-plan.html">The Park Plan</a></li>
+          <li><a href="park-access.html">Park Map</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="pssna.html">PSSNA</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h2 class="page-title">Upcoming Events</h2>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="content-wrapper">
+      <p class="events-intro">
+        Join us for community events, trail workdays, and educational activities at the Little Walnut Creek Greenbelt.
+      </p>
+
+      <!-- Event Flyer -->
+      <div class="event-flyer">
+        <picture>
+          <source srcset="pics/event_flyer.webp" type="image/webp">
+          <img src="pics/event_flyer.jpg" alt="Little Walnut Creek Greenbelt upcoming event flyer">
+        </picture>
+      </div>
+
+      <!--
+        ================================================================
+        AI ASSISTANT — EVENTS LIST TEMPLATE
+        ================================================================
+        When the flyer above is stale, replace the .event-flyer <div>
+        with the <ul> below (remove these comment markers and fill in
+        real event details). The CSS for all classes is already in this
+        file's <style> block.
+
+        To add an event: copy one <li> block and fill in the fields.
+        To remove an event: delete the <li>...</li> block.
+        When there are no events, replace the <ul> with:
+          <p class="no-events">No upcoming events at this time. Check back soon!</p>
+
+        <ul class="events-list">
+
+          <li>
+            <p class="event-title">Event Name Here</p>
+            <p class="event-date">Saturday, Month DD, YYYY · H:MM AM – H:MM AM</p>
+            <p class="event-description">
+              Brief description of the event.
+            </p>
+            <!-- Remove the line below if there is no link for this event -->
+            <p class="event-link"><a href="URL" target="_blank" rel="noopener noreferrer">More info ↗</a></p>
+          </li>
+
+        </ul>
+        ================================================================
+      -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Friends of Little Walnut Creek Greenbelt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Automatically update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

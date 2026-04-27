@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Friends of Little Walnut Creek Greenbelt - East Austin's newest greenbelt featuring over 200 acres of trails, creeks, and wildlife.">
+  <title>Friends of Little Walnut Creek Greenbelt</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts - Libre Baskerville for elegance, Source Sans 3 for readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ========================================
+       Hero Section (index.html specific)
+       ======================================== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 400px;
+      background-color: var(--color-white);
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      padding: var(--space-lg);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    /* Placeholder for when no image is available */
+    .hero-image-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      background: linear-gradient(
+        135deg,
+        var(--color-sage) 0%,
+        var(--color-sage-dark) 50%,
+        var(--color-forest) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.1rem;
+      padding: var(--space-lg);
+      text-align: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--space-xl);
+      background-color: var(--color-white);
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 400;
+      color: var(--color-sage-dark);
+      line-height: 1.3;
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--color-sage-light);
+    }
+
+    /* ========================================
+       About Section
+       ======================================== */
+    .about-section {
+      max-width: 800px;
+      padding: var(--space-xl);
+      margin: 0 auto;
+    }
+
+    .about-section p {
+      color: var(--color-stone-light);
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       Responsive Design
+       ======================================== */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 250px;
+      }
+
+      .hero-content {
+        padding: var(--space-lg);
+      }
+
+      .about-section {
+        padding: var(--space-lg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">Friends of Little Walnut Creek Greenbelt</h1>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="park-plan.html">The Park Plan</a></li>
+          <li><a href="park-access.html">Park Map</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="pssna.html">PSSNA</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-tagline">
+      <div class="hero-image">
+        <picture>
+          <source srcset="pics/lwc_playground1.webp" type="image/webp">
+          <img src="pics/lwc_playground1.jpg" alt="Little Walnut Creek Greenbelt playground surrounded by native trees and natural landscape in East Austin">
+        </picture>
+      </div>
+
+      <div class="hero-content">
+        <h2 id="hero-tagline" class="hero-tagline">East Austin's Newest Greenbelt</h2>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" aria-labelledby="about-title">
+      <h3 id="about-title" class="section-title">About</h3>
+      <p>
+        The Little Walnut Creek Greenbelt encompasses over 200 acres of
+        undeveloped land near the intersection of 51st St. and U.S. 183. The
+        greenbelt consists of vistas, creeks, natural features, and wildlife in the
+        heart of East Austin. Over four miles of trails stretch across the greenbelt,
+        but there is potential for much more. Friends of Little Walnut Creek is a
+        group of neighbors and members of the East Austin community whose
+        goal is to promote the development of the Little Walnut Creek Greenbelt.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Friends of Little Walnut Creek Greenbelt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Automatically update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

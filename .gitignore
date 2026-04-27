@@ -1,0 +1,3 @@
+# Images are served from Cloudflare R2 in production.
+# Keep them out of source control to avoid permanent binary bloat.
+pics/
