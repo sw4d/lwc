@@ -1,7 +1,8 @@
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://maps.google.com; connect-src 'self'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Robots-Tag: noai, noimageai
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https: https://assets.occamsites.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://assets.occamsites.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'
