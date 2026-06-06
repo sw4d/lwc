@@ -96,6 +96,36 @@
       text-decoration: underline;
     }
 
+    .events-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+
+    @media (max-width: 700px) {
+      .events-grid { grid-template-columns: 1fr; }
+    }
+
+    .event-card {
+      background-color: var(--color-cream);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.09);
+    }
+
+    .event-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .event-card-body {
+      padding: 1.25rem var(--space-lg);
+      border-top: 3px solid var(--color-sage);
+    }
+
+    .event-card-body .event-title { margin-bottom: var(--space-xs); }
+    .event-card-body .event-date  { margin-bottom: var(--space-sm); }
+
   </style>
 </head>
 <body>
@@ -132,43 +162,37 @@
         Join us for community events, trail workdays, and educational activities at the Little Walnut Creek Greenbelt.
       </p>
 
-      <!-- Event Flyer -->
-      <div class="event-flyer">
-        <picture>
-          <source srcset="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.webp" type="image/webp">
-          <img src="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.jpg" alt="Little Walnut Creek Greenbelt upcoming event flyer">
-        </source></picture>
-      </div>
+      <div class="events-grid">
 
-      <!--
-        ================================================================
-        AI ASSISTANT — EVENTS LIST TEMPLATE
-        ================================================================
-        When the flyer above is stale, replace the .event-flyer <div>
-        with the <ul> below (remove these comment markers and fill in
-        real event details). The CSS for all classes is already in this
-        file's <style> block.
-
-        To add an event: copy one <li> block and fill in the fields.
-        To remove an event: delete the <li>...</li> block.
-        When there are no events, replace the <ul> with:
-          <p class="no-events">No upcoming events at this time. Check back soon!</p>
-
-        <ul class="events-list">
-
-          <li>
-            <p class="event-title">Event Name Here</p>
-            <p class="event-date">Saturday, Month DD, YYYY · H:MM AM – H:MM AM</p>
+        <article class="event-card">
+          <picture>
+            <source srcset="pics/creek-1.webp" type="image/webp">
+            <img src="pics/creek%20-%201.jpeg" alt="Summer Kick-Off Party flyer — Saturday May 30th, 10 AM to 12 PM at Little Walnut Creek Park" loading="lazy">
+          </picture>
+          <div class="event-card-body">
+            <p class="event-title">Summer Kick-Off Party</p>
+            <p class="event-date">Saturday, May 30, 2026 · 10:00 AM – 12:00 PM</p>
             <p class="event-description">
-              Brief description of the event.
+              A free community celebration at Little Walnut Creek Park. Enjoy ice cream, facepainting, snacks, drinks, yard games, and more. Presented by Austin Parks Foundation.
             </p>
-            (Remove the line below if there is no link for this event)
-            <p class="event-link"><a href="URL" target="_blank" rel="noopener noreferrer">More info ↗</a></p>
-          </li>
+          </div>
+        </article>
 
-        </ul>
-        ================================================================
-      -->
+        <article class="event-card">
+          <picture>
+            <source srcset="pics/creek-2.webp" type="image/webp">
+            <img src="pics/creek%20-%202.jpeg" alt="Park Beautification Day flyer — Saturday June 20th, 9 AM to 12 PM at Little Walnut Creek Greenbelt" loading="lazy">
+          </picture>
+          <div class="event-card-body">
+            <p class="event-title">Park Beautification Day</p>
+            <p class="event-date">Saturday, June 20, 2026 · 9:00 AM – 12:00 PM</p>
+            <p class="event-description">
+              Help us mulch the dog park and pathways at the Little Walnut Creek Greenbelt. All are welcome!
+            </p>
+          </div>
+        </article>
+
+      </div>
     </div>
   </main>
 
