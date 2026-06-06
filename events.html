@@ -96,6 +96,18 @@
       text-decoration: underline;
     }
 
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--color-sage-dark);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-xs);
+      border-bottom: 1px solid var(--color-sage-light);
+    }
+
   </style>
 </head>
 <body>
@@ -132,13 +144,8 @@
         Join us for community events, trail workdays, and educational activities at the Little Walnut Creek Greenbelt.
       </p>
 
-      <!-- Event Flyer -->
-      <div class="event-flyer">
-        <picture>
-          <source srcset="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.webp" type="image/webp">
-          <img src="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.jpg" alt="Little Walnut Creek Greenbelt upcoming event flyer">
-        </source></picture>
-      </div>
+      <!-- No upcoming events flyer — see Past Events below -->
+      <p class="no-events">No upcoming events at this time. Check back soon!</p>
 
       <!--
         ================================================================
@@ -169,6 +176,17 @@
         </ul>
         ================================================================
       -->
+
+      <!-- Past Events -->
+      <h3 class="section-heading">Past Events</h3>
+
+      <!-- Summer Kick Off Party flyer -->
+      <div class="event-flyer">
+        <picture>
+          <source srcset="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.webp" type="image/webp">
+          <img src="https://assets.occamsites.com/019dccdf-ba63-7cfb-9eb2-1359c187a1a6/pics/event_flyer.jpg" alt="Summer Kick Off Party event flyer">
+        </source></picture>
+      </div>
     </div>
   </main>
 
